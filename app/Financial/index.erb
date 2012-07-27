@@ -1,0 +1,61 @@
+<div data-role="page">
+
+	<div data-role="header" data-position="inline">
+    <h1>Financiera</h1>
+    <a href="<%= Rho::RhoConfig.start_path %>" class="ui-btn-left" data-icon="back" data-direction="reverse" <%= "data-ajax='false'" if is_bb6 %>>
+      Back
+    </a>
+	</div>
+
+  <div data-role="content">
+  
+    <div class="titles">
+      <div class="details">
+        <p class="flecha">Tend</p>
+        <p class="value value-title">Valor</p>
+      </div>
+      Indicador
+    </div>
+    <ul data-role="listview" id="lista">  
+      <li data-icon="false">
+        <a href="<%= url_for :controller => :Roce, :action => :fetch %>">
+          <div class="details">
+            <img src="<%= @tend_img[@financial.roce_tend.to_i + 1] %>" class="flecha"/>
+            <p class="value"><%= @financial.roce %> &#37;</p>
+          </div>
+          <img src="<%= @flag_img[@financial.roce_flag.to_i + 1] %>" class="ui-li-icon ui-li-thumb" />
+            ROCE
+        </a>
+      </li>
+
+      <li data-icon="false">
+        <a href="<%= url_for :controller => :Ebitda, :action => :fetch %>">
+          <div class="details">
+            <img src="<%= @tend_img[@financial.ebitda_tend.to_i + 1] %>" class="flecha"/>
+            <p class="value"><%= @financial.ebitda %> MUS$</p>
+          </div>
+          <img src="<%= @flag_img[@financial.ebitda_flag.to_i + 1] %>" class="ui-li-icon ui-li-thumb" />
+            EBITDA
+        </a>
+      </li>
+
+      <li>
+        <div class="details">
+          <img src="/public/images/Arriba.gif" class="flecha"/>
+          <p class="value">50.7 MUS$</p>
+        </div>
+        <img src="/public/images/SemaforoVerde.gif" class="ui-li-icon ui-li-thumb" />
+          Flujo de caja generado   
+      </li>
+      <li>
+        <div class="details">
+          <img src="/public/images/Arriba.gif" class="flecha"/>
+          <p class="value">2.6</p>
+        </div>
+        <img src="/public/images/SemaforoVerde.gif" class="ui-li-icon ui-li-thumb" />
+          Cobertura de deuda
+      </li>
+    </ul>
+  </div>
+
+</div>

@@ -1,0 +1,25 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @productividad.cuf_pagable_filtrado %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @productividad.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">CufPagableFiltrado</td>
+        <td class="itemValue"><%= @productividad.cuf_pagable_filtrado%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">HorasHombre</td>
+        <td class="itemValue"><%= @productividad.horas_hombre%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

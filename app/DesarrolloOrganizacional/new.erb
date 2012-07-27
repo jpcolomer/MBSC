@@ -1,0 +1,25 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @desarrollo_organizacional.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @desarrollo_organizacional.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="desarrollo_organizacional[cuadros_reemplazo]" class="fieldLabel">Cuadros reemplazo</label>
+            <input type="text" id="desarrollo_organizacional[cuadros_reemplazo]" name="desarrollo_organizacional[cuadros_reemplazo]" <%= placeholder("Cuadros reemplazo") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

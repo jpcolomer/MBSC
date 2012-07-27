@@ -1,0 +1,115 @@
+ul#lista li.ui-li a.ui-link-inherit{
+	font-size: 14px;
+}
+
+div div.ui-header h1.ui-title {
+	overflow: visible;
+}
+
+.details, div.details {
+	float: right;
+	margin: 0;
+}
+
+.details .flecha, div.details img.flecha {
+	float: right;
+	margin: 0;
+}
+
+.details .value, div.details p.value {
+	margin: 0;
+	padding-right: 20px;
+}
+ul#lista{
+	margin-top: 15px;
+}
+
+.titles {
+	margin:-15px;
+	padding: 0px 5px;
+	font-weight: bold;
+	background-color: #333;
+	color: #fff;
+	text-shadow: black 0px 1px 0px;
+}
+
+.resume {
+	margin:-15px;
+	margin-top: 15px;
+	padding: 5px 5px;
+	font-weight: bold;
+	background-color: #333;
+	color: rgb(222,222,222);
+	font-size: 28px;
+	border-bottom: 2px solid white;
+}
+
+div.titles div.details p.value-title {
+	padding-right: 50px;
+}
+
+span.value {
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	width: 100px;
+	display: block;
+	text-align: center;
+}
+
+span.green {
+	background-color: rgb(59,162,71);
+	text-shadow: rgb(32, 89, 89) 0px 1px 0px;
+}
+
+span.red {
+	background-color: #B81A1D;
+	text-shadow: rgb(32, 89, 89) 0px 1px 0px;
+}
+
+span.yellow {
+	background-color: #fdca17;
+	text-shadow: rgb(32, 89, 89) 0px 1px 0px;
+}
+
+
+div.chart {
+	color: white;
+	margin: 25px -15px 10px;
+	text-align: center;
+	border-bottom: 2px solid white;
+	padding-bottom: 10px;
+}
+
+.chart .section-title, .kpi .section-title {
+	text-align: left;
+	margin-left: 20px;
+}
+
+div.principal-content {
+	background-color: #333;
+	background-image: none;
+}
+
+.kpi {
+	margin: 0 -15px;
+	color: white;
+}
+
+.kpi .titles {
+	margin:0px;
+}
+
+.kpi #lista li {
+	background-color: #333;
+	background-image: none;
+	color: white;
+	text-shadow: black 0px 1px 0px;
+	padding: 0.2em 15px;
+	border-bottom: none;
+}
+
+#chart_div {
+	height:280px;
+	width:360px;
+	margin: 0 auto;
+}

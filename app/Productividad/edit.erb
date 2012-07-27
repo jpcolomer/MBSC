@@ -1,0 +1,31 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @productividad.cuf_pagable_filtrado %></h1>
+    <a href="<%= url_for :action => :show, :id => @productividad.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @productividad.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @productividad.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="productividad[cuf_pagable_filtrado]" class="fieldLabel">Cuf pagable filtrado</label>
+            <input type="text" id="productividad[cuf_pagable_filtrado]" name="productividad[cuf_pagable_filtrado]" value="<%= @productividad.cuf_pagable_filtrado %>" <%= placeholder( "Cuf pagable filtrado" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="productividad[horas_hombre]" class="fieldLabel">Horas hombre</label>
+            <input type="text" id="productividad[horas_hombre]" name="productividad[horas_hombre]" value="<%= @productividad.horas_hombre %>" <%= placeholder( "Horas hombre" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

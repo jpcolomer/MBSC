@@ -1,0 +1,29 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :show, :id => @productividad.object %>
+    <h1>Edit <%= @productividad.cuf_pagable_filtrado%></h1>
+    <%= link_to "Delete", :action => :delete, :id => @productividad.object %>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @productividad.object %>"/>
+      <table>
+          
+          <tr>
+              <td class="itemLabel">Cuf pagable filtrado: </td>
+              <td class="itemValue"><input type="text" name="productividad[cuf_pagable_filtrado]" value="<%= @productividad.cuf_pagable_filtrado %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Horas hombre: </td>
+              <td class="itemValue"><input type="text" name="productividad[horas_hombre]" value="<%= @productividad.horas_hombre %>"/></td>
+          </tr>
+          
+      </table>
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

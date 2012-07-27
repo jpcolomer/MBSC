@@ -1,0 +1,55 @@
+<div data-role="page" id="kpi_index">
+
+	<div data-role="header" data-position="inline">
+    <h1>ROCE</h1>
+    <a href="<%= url_for :controller => :Financial, :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse" <%= "data-ajax='false'" if is_bb6 %>>
+      Back
+    </a>
+	</div>
+
+  <div data-role="content" class="principal-content">
+    <div class="titles">
+      <div class="details">
+        <p class="flecha">Tend</p>
+      </div>
+      Valor
+    </div>
+    <div class="resume">
+      <div class="details">
+        <img src="<%= @tend_img[@roce.tend.to_i] %>" class="flecha"/>
+      </div>
+      <span class="value <%= @flag_class[@roce.flag.to_i] %>">
+        <%= @roce.value %>
+      </span>
+    </div>
+    <div class="chart">
+      <div class="section-title">
+        Gráfico 1 año
+      </div>
+      <div id="chart_div"></div>
+    </div>
+    <div class="kpi">
+      <div class="titles">
+        <div class="details">
+          <p class="value value-title">Valor</p>
+        </div>
+        Kpi
+      </div>
+      <ul data-role="listview" id="lista">
+        <li>
+          <div class="details">
+            <p class="value"> <%= @roce.nopat %> MUS$</p>
+          </div>
+            NOPAT
+        </li>
+        <li>
+          <div class="details">
+            <p class="value"> <%= @roce.ce %> MUS$</p>
+          </div>
+            Capital empleado
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>

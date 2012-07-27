@@ -1,0 +1,31 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @exposicion_riesgo.cumplimiento_iniciativas %></h1>
+    <a href="<%= url_for :action => :show, :id => @exposicion_riesgo.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @exposicion_riesgo.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @exposicion_riesgo.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="exposicion_riesgo[cumplimiento_iniciativas]" class="fieldLabel">Cumplimiento iniciativas</label>
+            <input type="text" id="exposicion_riesgo[cumplimiento_iniciativas]" name="exposicion_riesgo[cumplimiento_iniciativas]" value="<%= @exposicion_riesgo.cumplimiento_iniciativas %>" <%= placeholder( "Cumplimiento iniciativas" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="exposicion_riesgo[incid_operacionales]" class="fieldLabel">Incid operacionales</label>
+            <input type="text" id="exposicion_riesgo[incid_operacionales]" name="exposicion_riesgo[incid_operacionales]" value="<%= @exposicion_riesgo.incid_operacionales %>" <%= placeholder( "Incid operacionales" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

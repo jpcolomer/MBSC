@@ -1,0 +1,15 @@
+<div data-role="page" data-url="<%= Rho::RhoConfig.start_path %>/">
+
+<div data-role="header" data-position="inline">
+  <h1>BSC</h1>
+</div>
+
+<div data-role="content">
+  <ul id="kpi_list" data-icon="false" data-split-icon="plus" data-split-theme="d" data-role="listview" data-filter="true" data-filter-placeholder="Indicador o kpi ...">
+    <% @kpi_and_indicator_url.sort.map do |kpi, kpi_url| %>
+      <li><a href="<%= kpi_url %>"><%= kpi %></a></li>
+    <% end %>
+  </ul>
+</div>
+
+</div>

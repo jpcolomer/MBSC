@@ -1,0 +1,109 @@
+<div data-role="page">
+
+	<div data-role="header" data-position="inline">
+    <h1>Operacional</h1>
+    <a href="<%= Rho::RhoConfig.start_path %>" class="ui-btn-left" data-icon="back" data-direction="reverse" <%= "data-ajax='false'" if is_bb6 %>>
+      Back
+    </a>
+	</div>
+
+  <div data-role="content">
+    <div class="titles">
+      <div class="details">
+        <p class="flecha">Tend</p>
+        <p class="value value-title">Valor</p>
+      </div>
+      Indicador
+    </div>
+    <ul data-role="listview" id="lista">  
+
+      <li>
+        <div class="details">
+          <img src="/public/images/Arriba.gif" class="flecha"/>
+          <p class="value">102.1 Ptos</p>
+        </div>
+        <img src="/public/images/SemaforoVerde.gif" class="ui-li-icon ui-li-thumb" />
+          Seguridad
+      </li>
+          
+      <li>
+        <div class="details">
+          <img src="/public/images/Arriba.gif" class="flecha"/>
+          <p class="value">90.0 Ptos</p>
+        </div>
+        <img src="/public/images/SemaforoVerde.gif" class="ui-li-icon ui-li-thumb" />
+          Costos
+      </li>
+
+
+      <li data-icon="false">
+        <a href="<%= url_for :controller => :Productividad, :action => :fetch %>">
+          <div class="details">
+            <img src="<%= @tend_img[@operational.productividad_tend.to_i + 1] %>" class="flecha"/>
+            <p class="value"><%= @operational.productividad %> tcuf/hh</p>
+          </div>
+          <img src="<%= @flag_img[@operational.productividad_flag.to_i + 1] %>" class="ui-li-icon ui-li-thumb" />
+            Productividad
+        </a>
+      </li>
+
+      <li>
+        <div class="details">
+          <img src="/public/images/Arriba.gif" class="flecha"/>
+          <p class="value">104.4 Ptos</p>
+        </div>
+        <img src="/public/images/SemaforoVerde.gif" class="ui-li-icon ui-li-thumb" />
+          Gestion de consumos claves
+      </li>
+      <li>
+        <div class="details">
+          <img src="/public/images/Arriba.gif" class="flecha"/>
+          <p class="value">101.1 Ptos</p>
+        </div>
+        <img src="/public/images/SemaforoVerde.gif" class="ui-li-icon ui-li-thumb" />
+          Gestion equipos mina
+      </li>
+      <li>
+        <div class="details">
+          <img src="/public/images/Arriba.gif" class="flecha"/>
+          <p class="value">4.745 tms</p>
+        </div>
+        <img src="/public/images/SemaforoVerde.gif" class="ui-li-icon ui-li-thumb" />
+          Cuf pagable filtrado
+      </li>
+      <li>
+        <div class="details">
+          <img src="/public/images/Arriba.gif" class="flecha"/>
+          <p class="value">5.9 koz</p>
+        </div>
+        <img src="/public/images/SemaforoVerde.gif" class="ui-li-icon ui-li-thumb" />
+          Auf pagable filtrado
+      </li>
+      <li>
+        <div class="details">
+          <img src="/public/images/Arriba.gif" class="flecha"/>
+          <p class="value">82.4 &#37;</p>
+        </div>
+        <img src="/public/images/SemaforoVerde.gif" class="ui-li-icon ui-li-thumb" />
+          Coeficiente de marcha
+      </li>
+      <li>
+        <div class="details">
+          <img src="/public/images/Arriba.gif" class="flecha"/>
+          <p class="value">128.6 Ptos</p>
+        </div>
+        <img src="/public/images/SemaforoVerde.gif" class="ui-li-icon ui-li-thumb" />
+          Gestion inversiones desarrollo
+      </li>
+      <li>
+        <div class="details">
+          <img src="/public/images/Arriba.gif" class="flecha"/>
+          <p class="value">90.0 Ptos</p>
+        </div>
+        <img src="/public/images/SemaforoVerde.gif" class="ui-li-icon ui-li-thumb" />
+          Gestion inversiones operacion
+      </li>
+    </ul>
+  </div>
+
+</div>

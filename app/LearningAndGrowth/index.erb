@@ -1,0 +1,48 @@
+<div data-role="page">
+
+	<div data-role="header" data-position="inline">
+    <h1>Aprendizaje y Crecimiento</h1>
+    <a href="<%= Rho::RhoConfig.start_path %>" class="ui-btn-left" data-icon="back" data-direction="reverse" <%= "data-ajax='false'" if is_bb6 %>>
+      Back
+    </a>
+	</div>
+
+  <div data-role="content">
+    <div class="titles">
+      <div class="details">
+        <p class="flecha">Tend</p>
+        <p class="value value-title">Valor</p>
+      </div>
+      Indicador
+    </div>
+    <ul data-role="listview" id="lista">
+      <li data-icon="false">
+        <a href="<%= url_for :controller => :DesarrolloOrganizacional, :action => :fetch %>">
+          <div class="details">
+            <img src="<%= @tend_img[@learning_and_growth.desarrollo_organizacional_tend.to_i + 1] %>" class="flecha"/>
+            <p class="value"><%= @learning_and_growth.desarrollo_organizacional %> Ptos</p>
+          </div>
+          <img src="<%= @flag_img[@learning_and_growth.desarrollo_organizacional_flag.to_i + 1] %>" class="ui-li-icon ui-li-thumb" />
+            Desarrollo organizacional
+        </a>
+      </li>         
+      <li>
+        <div class="details">
+          <img src="/public/images/Arriba.gif" class="flecha"/>
+          <p class="value">103.4 Ptos</p>
+        </div>
+        <img src="/public/images/SemaforoVerde.gif" class="ui-li-icon ui-li-thumb" />
+          Rotacion no deseada
+      </li>
+      <li>
+        <div class="details">
+          <img src="/public/images/Arriba.gif" class="flecha"/>
+          <p class="value">92.3 Ptos</p>
+        </div>
+        <img src="/public/images/SemaforoVerde.gif" class="ui-li-icon ui-li-thumb" />
+          Mejoramiento continuo
+      </li>
+    </ul>
+  </div>
+
+</div>

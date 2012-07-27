@@ -1,0 +1,29 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @exposicion_riesgo.cumplimiento_iniciativas %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @exposicion_riesgo.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">CumplimientoIniciativas</div>
+            <div class="itemValue"><%= @exposicion_riesgo.cumplimiento_iniciativas %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">IncidOperacionales</div>
+            <div class="itemValue"><%= @exposicion_riesgo.incid_operacionales %></div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>

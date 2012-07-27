@@ -1,0 +1,16 @@
+<div data-role="page" data-url="<%= Rho::RhoConfig.start_path %>/">
+
+  <div data-role="header" data-position="inline">
+    <h1>BSC</h1>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview" data-icon="false" data-split-icon="plus" data-split-theme="d">
+      <li><a href="<%= url_for :controller => :Financial, :action => :fetch %>">Financiero</a></li>
+      <li><a href="<%= url_for :controller => :Client, :action => :fetch %>">Clientes</a></li>
+      <li><a href="<%= url_for :controller => :Operational, :action => :fetch %>">Operacional</a></li>
+      <li><a href="<%= url_for :controller => :LearningAndGrowth, :action => :fetch %>">Aprendizaje y Crecimiento</a></li>
+    </ul>
+  </div>
+
+</div>

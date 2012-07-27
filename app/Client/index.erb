@@ -1,0 +1,81 @@
+<div data-role="page">
+
+	<div data-role="header" data-position="inline">
+    <h1>Clientes</h1>
+    <a href="<%= Rho::RhoConfig.start_path %>" class="ui-btn-left" data-icon="back" data-direction="reverse" <%= "data-ajax='false'" if is_bb6 %>>
+      Back
+    </a>
+	</div>
+
+  <div data-role="content">
+    <div class="titles">
+      <div class="details">
+        <p class="flecha">Tend</p>
+        <p class="value value-title">Valor</p>
+      </div>
+      Indicador
+    </div>
+    <ul data-role="listview" id="lista">
+
+      <li data-icon="false">
+        <a href="<%= url_for :controller => :ExposicionRiesgo, :action => :fetch %>">
+          <div class="details">
+            <img src="<%= @tend_img[@client.exposicion_riesgo_tend.to_i + 1] %>" class="flecha"/>
+            <p class="value"><%= @client.exposicion_riesgo %> Ptos</p>
+          </div>
+          <img src="<%= @flag_img[@client.exposicion_riesgo_flag.to_i + 1] %>" class="ui-li-icon ui-li-thumb" />
+            Exposicion al riesgo
+        </a>
+      </li>
+      <li>
+        <div class="details">
+          <img src="/public/images/Arriba.gif" class="flecha"/>
+          <p class="value">102.1 Ptos</p>
+        </div>
+        <img src="/public/images/SemaforoVerde.gif" class="ui-li-icon ui-li-thumb" />
+        Reputacion de stakeholders
+      </li>
+      <li>
+        <div class="details">
+          <img src="/public/images/Arriba.gif" class="flecha"/>
+          <p class="value">99.4 Ptos</p>
+        </div>
+        <img src="/public/images/SemaforoVerde.gif" class="ui-li-icon ui-li-thumb" />
+        Sustentabilidad
+      </li>      
+      <li>
+          <div class="details">
+            <img src="/public/images/Arriba.gif" class="flecha"/>
+            <p class="value">118.5 Ptos</p>
+          </div>
+          <img src="/public/images/SemaforoVerde.gif" class="ui-li-icon ui-li-thumb" />
+          Calidad ambiental
+      </li>
+      <li>
+          <div class="details">
+            <img src="/public/images/Arriba.gif" class="flecha"/>
+            <p class="value">122.3 &#37;</p>
+          </div>
+          <img src="/public/images/SemaforoVerde.gif" class="ui-li-icon ui-li-thumb" />
+          Completion Test
+      </li>
+      <li>
+          <div class="details">
+            <img src="/public/images/Arriba.gif" class="flecha"/>
+            <p class="value">93.4 Ptos</p>
+          </div>
+          <img src="/public/images/SemaforoVerde.gif" class="ui-li-icon ui-li-thumb" />
+          Bienestar
+      </li>
+      <li>
+          <div class="details">
+            <img src="/public/images/Arriba.gif" class="flecha"/>
+            <p class="value">102.7 Ptos</p>
+          </div>
+          <img src="/public/images/SemaforoVerde.gif" class="ui-li-icon ui-li-thumb" />
+          Clima organizacional
+      </li>      
+    </ul>
+  </div>
+
+</div>

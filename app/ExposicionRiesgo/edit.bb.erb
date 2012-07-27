@@ -1,0 +1,29 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :show, :id => @exposicion_riesgo.object %>
+    <h1>Edit <%= @exposicion_riesgo.cumplimiento_iniciativas%></h1>
+    <%= link_to "Delete", :action => :delete, :id => @exposicion_riesgo.object %>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @exposicion_riesgo.object %>"/>
+      <table>
+          
+          <tr>
+              <td class="itemLabel">Cumplimiento iniciativas: </td>
+              <td class="itemValue"><input type="text" name="exposicion_riesgo[cumplimiento_iniciativas]" value="<%= @exposicion_riesgo.cumplimiento_iniciativas %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Incid operacionales: </td>
+              <td class="itemValue"><input type="text" name="exposicion_riesgo[incid_operacionales]" value="<%= @exposicion_riesgo.incid_operacionales %>"/></td>
+          </tr>
+          
+      </table>
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>
